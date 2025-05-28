@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Admin | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link rel="stylesheet" href="../css/server.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='dashboardAdmin.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user.html';"
+              ><i class="fas fa-user"></i> <span>User</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='server.html';"
+              ><i class="fas fa-server"></i> <span>Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='settings.html';"
+              ><i class="fas fa-cog"></i> <span>Settingss</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="admin-servers" class="dashboard-tab">
+      <div class="tab-header">
+        <h3>Servers Management</h3>
+        <button class="btn btn-primary">
+          <i class="fas fa-plus"></i> Add Server
+        </button>
+      </div>
+      <div class="server-status">
+        <div class="status-card">
+          <h4>Server Status</h4>
+          <div class="status-indicators">
+            <div class="status-item">
+              <span class="status-label">Online</span>
+              <span class="status-value">845</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Maintenance</span>
+              <span class="status-value">11</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Offline</span>
+              <span class="status-value">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="status-card">
+          <h4>Load Average</h4>
+          <div class="load-chart">
+            <canvas id="loadChart"></canvas>
+          </div>
+        </div>
+        <div class="status-card">
+          <h4>Storage Usage</h4>
+          <div class="storage-chart">
+            <canvas id="storageChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="table-container">
+        <div class="table-filters">
+          <div class="filter-group">
+            <label>Type:</label>
+            <select>
+              <option value="">All</option>
+              <option value="vps">VPS</option>
+              <option value="dedicated">Dedicated</option>
+              <option value="cloud">Cloud</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Status:</label>
+            <select>
+              <option value="">All</option>
+              <option value="online">Online</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="offline">Offline</option>
+            </select>
+          </div>
+          <div class="search-filter">
+            <input type="text" placeholder="Search servers..." />
+          </div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Client</th>
+              <th>IP Address</th>
+              <th>Status</th>
+              <th>Uptime</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SRV001</td>
+              <td>Jakarta-VPS-01</td>
+              <td>VPS</td>
+              <td>PT. Maju Bersama</td>
+              <td>192.168.1.101</td>
+              <td><span class="badge online">Online</span></td>
+              <td>45 days</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="action-btn">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-power-off"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-cog"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>SRV002</td>
+              <td>Jakarta-DED-01</td>
+              <td>Dedicated</td>
+            </tr>
+
+            <tr>
+              <td>SRV002</td>
+              <td>Jakarta-DED-01</td>
+              <td>Dedicated</td>
+              <td>GameBox Corp</td>
+              <td>192.168.1.102</td>
+              <td><span class="badge online">Online</span></td>
+              <td>30 days</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="action-btn">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-power-off"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-cog"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>SRV003</td>
+              <td>Jakarta-CLD-01</td>
+              <td>Cloud</td>
+              <td>DataPro Inc</td>
+              <td>192.168.1.103</td>
+              <td>
+                <span class="badge maintenance">Maintenance</span>
+              </td>
+              <td>10 days</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="action-btn">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-power-off"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-cog"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>SRV004</td>
+              <td>Bandung-VPS-01</td>
+              <td>VPS</td>
+              <td>Tech Solutions</td>
+              <td>192.168.1.104</td>
+              <td><span class="badge online">Online</span></td>
+              <td>15 days</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="action-btn">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-power-off"></i>
+                  </button>
+                  <button class="action-btn">
+                    <i class="fas fa-cog"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/server.js"></script>
+  </body>
+</html>

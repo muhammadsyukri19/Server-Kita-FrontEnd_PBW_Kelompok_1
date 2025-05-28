@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings Admin | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/settings.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i><span>ServerKita.</span></h2>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='dashboardAdmin.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user.html';"
+              ><i class="fas fa-user"></i> <span>User</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='server.html';"
+              ><i class="fas fa-server"></i> <span>Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='settings.html';"
+              ><i class="fas fa-cog"></i> <span>Settings</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-tab">
+      <div class="settings-header">
+        <h1>Settings</h1>
+        <p>Configure and customize your application settings</p>
+        <div class="profile-logout">
+          <button
+            class="logout-btn"
+            onclick="window.location.href='../index.html';"
+          >
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+
+      <div class="settings-container">
+        <!-- General Settings Section -->
+        <div class="settings-section">
+          <div class="section-header">
+            <h2><i class="fas fa-sliders-h"></i> General Settings</h2>
+          </div>
+          <div class="section-content">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Site Name</h3>
+                <p>Name displayed in the browser title and emails</p>
+              </div>
+              <div class="setting-control">
+                <input
+                  type="text"
+                  value="Admin Dashboard"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Site Description</h3>
+                <p>Brief description of your site for SEO</p>
+              </div>
+              <div class="setting-control">
+                <textarea class="form-control">
+Administrative dashboard for managing users and system settings</textarea
+                >
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Maintenance Mode</h3>
+                <p>Enable maintenance mode to temporarily disable the site</p>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appearance Settings Section -->
+        <div class="settings-section">
+          <div class="section-header">
+            <h2><i class="fas fa-palette"></i> Appearance</h2>
+          </div>
+          <div class="section-content">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Theme</h3>
+                <p>Choose the visual theme for your dashboard</p>
+              </div>
+              <div class="setting-control">
+                <select class="form-control">
+                  <option selected>Purple Gold (Default)</option>
+                  <option>Dark Mode</option>
+                  <option>Light Mode</option>
+                  <option>Ocean Blue</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Logo</h3>
+                <p>Upload a custom logo (recommended size: 150x50px)</p>
+              </div>
+              <div class="setting-control file-upload">
+                <input type="file" id="logo-upload" hidden />
+                <label for="logo-upload" class="btn btn-outline">
+                  <i class="fas fa-cloud-upload-alt"></i> Upload Logo
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Custom CSS</h3>
+                <p>Add custom CSS styles to override default appearance</p>
+              </div>
+              <div class="setting-control">
+                <textarea class="form-control code">
+/* Add custom CSS here */</textarea
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Settings Section -->
+        <div class="settings-section">
+          <div class="section-header">
+            <h2><i class="fas fa-shield-alt"></i> Security</h2>
+          </div>
+          <div class="section-content">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Two-Factor Authentication</h3>
+                <p>Require 2FA for all administrator accounts</p>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Password Policy</h3>
+                <p>Set minimum requirements for user passwords</p>
+              </div>
+              <div class="setting-control">
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" checked /> Minimum 8 characters
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" checked /> Require uppercase letters
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" checked /> Require numbers
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" /> Require special characters
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Session Timeout</h3>
+                <p>Automatically log out inactive users</p>
+              </div>
+              <div class="setting-control">
+                <select class="form-control">
+                  <option>15 minutes</option>
+                  <option selected>30 minutes</option>
+                  <option>1 hour</option>
+                  <option>2 hours</option>
+                  <option>Never</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Settings Section -->
+        <div class="settings-section">
+          <div class="section-header">
+            <h2><i class="fas fa-envelope"></i> Email Configuration</h2>
+          </div>
+          <div class="section-content">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>SMTP Server</h3>
+                <p>Server used for sending emails</p>
+              </div>
+              <div class="setting-control">
+                <input
+                  type="text"
+                  value="smtp.example.com"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>SMTP Port</h3>
+                <p>Port used for SMTP connections</p>
+              </div>
+              <div class="setting-control">
+                <input type="number" value="587" class="form-control" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Sender Email</h3>
+                <p>Email address used as the sender for all system emails</p>
+              </div>
+              <div class="setting-control">
+                <input
+                  type="email"
+                  value="example.serverkita@example.com"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <h3>Email Encryption</h3>
+                <p>Encryption method for email communication</p>
+              </div>
+              <div class="setting-control">
+                <select class="form-control">
+                  <option>None</option>
+                  <option selected>TLS</option>
+                  <option>SSL</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="settings-actions">
+          <button class="btn btn-secondary">Cancel</button>
+          <button class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

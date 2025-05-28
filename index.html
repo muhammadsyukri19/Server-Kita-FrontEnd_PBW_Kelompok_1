@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServerKita. - Penyewaan Server</title>
+    <link rel="icon" type="image/png" href="asset/server.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1><span class="judul">Server</span>Kita.</h1>
+        </div>
+        <nav id="navbar">
+          <ul>
+            <li><a href="#home" id="home-link">Beranda</a></li>
+            <li><a href="#aboutus" id="about-link">Tentang Kami</a></li>
+            <li><a href="#layanan" id="products-link">Layanan</a></li>
+            <li><a href="#tim" id="pricing-link">Tim</a></li>
+            <li><a href="#contact" id="contact-link">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <button
+            id="login-button"
+            class="btn btn-secondary"
+            onclick="window.location.href='pages/login.html';"
+          >
+            Login
+          </button>
+          <button
+            id="signup-button"
+            class="btn btn-signup"
+            onclick="window.location.href='pages/signup.html';"
+          >
+            Daftar
+          </button>
+          <div id="user-profile" class="hidden">
+            <img
+              src="https://media.istockphoto.com/id/1300845620/id/vektor/ikon-pengguna-datar-terisolasi-pada-latar-belakang-putih-simbol-pengguna-ilustrasi-vektor.jpg?s=612x612&w=0&k=20&c=QN0LOsRwA1dHZz9lsKavYdSqUUnis3__FQLtZTQ--Ro="
+              alt="Profile"
+              id="profile-img"
+            />
+            <div
+              class="dropdown-content"
+              onclick="window.location.href='pages/login.html';"
+            >
+              <a href="#" id="dashboard-link">Dashboard</a>
+              <a href="#" id="profile-link">Profil</a>
+              <a href="#" id="logout-link">Logout</a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="active">
+        <div class="hero">
+          <div class="container">
+            <div class="hero-wrapper">
+              <div class="hero-content">
+                <h1>Server Handal untuk Bisnis Anda</h1>
+                <p>
+                  Solusi hosting dan server berkualitas tinggi dengan jaminan
+                  uptime 99.9%
+                </p>
+                <button class="btn btn-primary-1 btn-large">
+                  Mulai Sekarang
+                </button>
+              </div>
+              <div class="hero-image">
+                <img src="asset/Logo_1.png" alt="Server Illustration" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- About Us / Introduction Section -->
+        <section class="about-section fade-in" id="aboutus">
+          <div class="about-container">
+            <div class="about-content">
+              <div class="about-text fade-in">
+                <h2 class="section-title">
+                  Solusi Server Terbaik untuk Bisnis Anda
+                </h2>
+                <p class="section-subtitle">
+                  Menyediakan layanan server terpercaya sejak 2015
+                </p>
+
+                <div class="divider"></div>
+
+                <p class="about-description">
+                  ServerKita adalah penyedia layanan penyewaan server terkemuka
+                  di Indonesia yang berfokus pada keandalan, kinerja tinggi, dan
+                  dukungan pelanggan yang luar biasa.
+                </p>
+
+                <div class="about-cta fade-in">
+                  <a href="#layanan" class="cta-button">Lihat Paket Kami</a>
+                  <a href="#contact" class="cta-link">
+                    Hubungi Tim Kami <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="about-image fade-in">
+                <div class="image-container">
+                  <img
+                    src="asset/serverdb.jpg"
+                    alt="Server Datacenter ServerRent"
+                  />
+                  <div class="experience-badge">
+                    <span class="years">8+</span>
+                    <span class="text">Tahun<br />Pengalaman</span>
+                  </div>
+                </div>
+
+                <div class="stats-container fade-in">
+                  <div class="stat-item">
+                    <span class="stat-number" data-count="1500">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Klien Aktif</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number" data-count="5000">0</span>
+                    <span class="stat-plus">+</span>
+                    <span class="stat-label">Server Terkelola</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number" data-count="99.9">0</span>
+                    <span class="stat-plus">%</span>
+                    <span class="stat-label">Uptime</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="features">
+          <div class="container fade-in">
+            <h2 class="section-title">Keunggulan Kami</h2>
+            <div class="features-grid fade-in`">
+              <div class="feature-card">
+                <i class="fas fa-server"></i>
+                <h3>Server Performa Tinggi</h3>
+                <p>
+                  Hardware premium dengan spesifikasi terkini untuk menjamin
+                  kecepatan dan stabilitas layanan.
+                </p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Keamanan Terjamin</h3>
+                <p>
+                  Sistem keamanan berlapis menggunakan DDoS dan firewall canggih
+                  untuk menjaga data dan aplikasi Anda tetap aman.
+                </p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>Dukungan 24/7</h3>
+                <p>
+                  Tim teknisi berpengalaman siap membantu Anda kapan saja
+                  melalui telepon, email, atau live chat.
+                </p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Uptime 99.9%</h3>
+                <p>
+                  Jaminan ketersediaan server dengan tingkat uptime tertinggi di
+                  industri.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-preview" id="layanan">
+          <div class="container-price">
+            <h2 class="section-title-1">Paket Layanan</h2>
+            <div class="pricing-cards">
+              <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="price">Rp 500.000<span>/bulan</span></div>
+                <ul>
+                  <li>2 CPU Cores</li>
+                  <li>4 GB RAM</li>
+                  <li>80 GB SSD</li>
+                  <li>1 TB Bandwidth</li>
+                </ul>
+                <button class="btn btn-outline">Pilih Paket</button>
+              </div>
+              <div class="pricing-card featured">
+                <div class="featured-label">Terpopuler</div>
+                <h3>Professional</h3>
+                <div class="price">Rp 1.200.000<span>/bulan</span></div>
+                <ul>
+                  <li>4 CPU Cores</li>
+                  <li>8 GB RAM</li>
+                  <li>160 GB SSD</li>
+                  <li>2 TB Bandwidth</li>
+                </ul>
+                <button class="btn btn-primary">Pilih Paket</button>
+              </div>
+              <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">Rp 2.500.000<span>/bulan</span></div>
+                <ul>
+                  <li>8 CPU Cores</li>
+                  <li>16 GB RAM</li>
+                  <li>320 GB SSD</li>
+                  <li>5 TB Bandwidth</li>
+                </ul>
+                <button class="btn btn-outline">Pilih Paket</button>
+              </div>
+              <div class="pricing-card">
+                <h3>Business</h3>
+                <div class="price">Rp 4.500.000<span>/bulan</span></div>
+                <ul>
+                  <li>16 CPU Cores</li>
+                  <li>32 GB RAM</li>
+                  <li>640 GB SSD</li>
+                  <li>10 TB Bandwidth</li>
+                </ul>
+                <button class="btn btn-outline">Pilih Paket</button>
+              </div>
+              <div class="pricing-card">
+                <h3>Ultimate</h3>
+                <div class="price">Rp 7.500.000<span>/bulan</span></div>
+                <ul>
+                  <li>32 CPU Cores</li>
+                  <li>64 GB RAM</li>
+                  <li>1.2 TB SSD</li>
+                  <li>20 TB Bandwidth</li>
+                </ul>
+                <button class="btn btn-outline">Pilih Paket</button>
+              </div>
+              <div class="pricing-card">
+                <h3>Supreme</h3>
+                <div class="price">Rp 10.000.000<span>/bulan</span></div>
+                <ul>
+                  <li>64 CPU Cores</li>
+                  <li>128 GB RAM</li>
+                  <li>2.5 TB SSD</li>
+                  <li>Unlimited Bandwidth</li>
+                </ul>
+                <button class="btn btn-outline">Pilih Paket</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni -->
+        <div class="testimonials">
+          <div class="container">
+            <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+            <div class="testimonial-slider">
+              <div class="testimonial active">
+                <div class="testimonial-content">
+                  <p>
+                    "Layanan server yang sangat handal. Downtime hampir tidak
+                    pernah terjadi dan dukungan teknis sangat responsif."
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <img src="asset/reviewer_1.png" alt="Customer" />
+                  <div>
+                    <h4>Ahmad Sulaiman</h4>
+                    <p>CEO, TechSolutions</p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <p>
+                    "Proses setup server sangat cepat dan mudah. Fitur panel
+                    admin sangat memudahkan dalam monitoring performa server."
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <img src="asset/reviewer_2.png" alt="Customer" />
+                  <div>
+                    <h4>Siti Rahayu</h4>
+                    <p>CTO, DataPro</p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <p>
+                    "Telah menggunakan layanan ServerRent selama 3 tahun dan
+                    tidak pernah mengalami masalah berarti. Sangat
+                    direkomendasikan!"
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <img src="asset/reviewer_3.png" alt="Customer" />
+                  <div>
+                    <h4>Budi Santoso</h4>
+                    <p>Founder, GameBox</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-controls">
+              <button class="testimonial-prev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <button class="testimonial-next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-section" id="tim">
+          <h2>Tim Pengembang</h2>
+          <div class="team-container">
+            <div class="team-card">
+              <img src="asset/anggota/syukri.jpg" alt="Anggota 1" />
+              <h3>Muhammad Syukri</h3>
+              <p>2308107010060</p>
+              <p>Project Manager, Landing Page, Dashboard Admin</p>
+            </div>
+
+            <div class="team-card">
+              <img src="asset/anggota/azizi.jpg" alt="Anggota 2" />
+              <h3>Muhammad Al Azizi</h3>
+              <p>2308107010044</p>
+              <p>Dashboard User: Profil, Billing, Virtual Server</p>
+            </div>
+
+            <div class="team-card">
+              <img src="asset/anggota/hadziq.jpg" alt="Anggota 3" />
+              <h3>Muhammad Al-Hadziq Tarmizi</h3>
+              <p>2108107010022</p>
+              <p>Dashboard User: Overview</p>
+            </div>
+
+            <div class="team-card">
+              <img src="asset/anggota/thahira.jpg" alt="Anggota 4" />
+              <h3>Thahira Riska</h3>
+              <p>2308107010024</p>
+              <p>Halaman Admin: User-Tambah User</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container-bottom" id="contact">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>ServerKita.</h3>
+            <p>
+              Solusi server handal untuk kebutuhan hosting dan infrastruktur IT
+              Anda.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#home" id="home-link">Beranda</a></li>
+              <li><a href="#aboutus" id="about-link">Tentang Kami</a></li>
+              <li><a href="#layanan" id="products-link">Layanan</a></li>
+              <li><a href="#tim" id="pricing-link">Tim</a></li>
+              <li><a href="#contact" id="contact-link">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Kontak</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jl. Pocut Baren, No. 1134,
+              Banda Aceh, Aceh, Indonesia
+            </p>
+            <p><i class="fas fa-phone"></i> (021) 12345678</p>
+            <p><i class="fas fa-envelope"></i> info@serverkita.com</p>
+          </div>
+          <div class="footer-section newsletter">
+            <h3>Newsletter</h3>
+            <p>
+              Berlangganan untuk mendapatkan info terbaru dan promo spesial.
+            </p>
+            <form>
+              <input type="email" placeholder="Email Anda" />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ServerKita. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/signUp.js"></script>
+  </body>
+</html>

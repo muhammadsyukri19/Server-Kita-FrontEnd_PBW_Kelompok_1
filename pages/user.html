@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Admin | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png">
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body>
+<!-- Sidebar -->
+  <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i><span>ServerKita.</span></h2>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='dashboardAdmin.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="active" onclick="window.location.href='user.html';"
+              ><i class="fas fa-user"></i> <span>User</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="window.location.href='server.html';"
+              ><i class="fas fa-server"></i> <span>Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='settings.html';"
+              ><i class="fas fa-cog"></i> <span>Settings</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div> 
+  <!-- Users Management -->
+  <div class="users-section">
+      <div class="section-header">
+          <h3>Users Management</h3>
+          <button type="button" class="btn-add" onclick="window.location.href='addUser.html';">+ Add User</button>
+      </div>
+      <div class="filter-controls">
+          <div class="filter-group">
+              <label for="role-filter">Role</label>
+              <select id="role-filter">
+                  <option>All</option>
+                  <option>Admin</option>
+                  <option>User</option>
+              </select>
+          </div>
+          <div class="filter-group">
+              <label for="status-filter">Status</label>
+              <select id="status-filter">
+                  <option>All</option>
+                  <option>Active</option>
+                  <option>Inactive</option>
+              </select>
+          </div>
+          <div class="filter-group">
+              <label for="search-users">Search</label>
+              <input type="text" id="search-users" placeholder="Search users...">
+          </div>
+      </div>
+      <table class="users-table">
+          <thead>
+              <tr>
+                  <th class="checkbox-cell"><input type="checkbox"></th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Registered</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody id="body-table">
+              <!-- <tr>
+                  <td class="checkbox-cell"><input type="checkbox"></td>
+                  <td>USR001</td>
+                  <td>Ahmad Rizki</td>
+                  <td>ahmad@example.com</td>
+                  <td>Admin</td>
+                  <td><span class="status status-active">Active</span></td>
+                  <td>15 Mar 2025</td>
+                  <td>
+                      <div class="action-buttons">
+                          <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                          <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="checkbox-cell"><input type="checkbox"></td>
+                  <td>USR002</td>
+                  <td>Siti Rahayu</td>
+                  <td>siti@example.com</td>
+                  <td>User</td>
+                  <td><span class="status status-active">Active</span></td>
+                  <td>12 Mar 2025</td>
+                  <td>
+                      <div class="action-buttons">
+                          <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                          <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="checkbox-cell"><input type="checkbox"></td>
+                  <td>USR003</td>
+                  <td>Budi Santoso</td>
+                  <td>budi@example.com</td>
+                  <td>User</td>
+                  <td><span class="status status-inactive">Inactive</span></td>
+                  <td>10 Mar 2025</td>
+                  <td>
+                      <div class="action-buttons">
+                          <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                          <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="checkbox-cell"><input type="checkbox"></td>
+                  <td>USR004</td>
+                  <td>Dewi Anggraini</td>
+                  <td>dewi@example.com</td>
+                  <td>User</td>
+                  <td><span class="status status-active">Active</span></td>
+                  <td>5 Mar 2025</td>
+                  <td>
+                      <div class="action-buttons">
+                          <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                          <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                      </div>
+                  </td>
+              </tr> -->
+          </tbody>
+      </table>
+      <!-- <div class="pagination">
+          <div class="page-item active">1</div>
+          <div class="page-item">2</div>
+          <div class="page-item">3</div>
+          <div class="page-item"><i class="fas fa-ellipsis-h"></i></div>
+          <div class="page-item">10</div>
+      </div> -->
+  </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="../js/user.js"></script>
+  <script src="../js/services/users/getAllUsers.js"></script>
+</body>
+</html>

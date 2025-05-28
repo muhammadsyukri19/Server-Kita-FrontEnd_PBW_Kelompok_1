@@ -1,0 +1,363 @@
+:root {
+  --primary-color: #3b355a;
+  --secondary-color: #ffd966;
+  --accent-color: #f6b26b;
+  --dark-color: #2d3748;
+  --light-color: #f8fafc;
+  --success-color: #68d391;
+  --warning-color: #f6ad55;
+  --danger-color: #fc8181;
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;
+  --border-radius: 10px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font-sans: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--gray-200);
+  color: var(--gray-800);
+  display: flex;
+  min-height: 100vh;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 260px;
+  background-color: var(--light-color);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--gray-300);
+}
+
+.sidebar-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.sidebar-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-menu {
+  padding: 15px 0;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin-bottom: 5px;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--gray-700);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 0 10px;
+  gap: 12px;
+}
+
+.sidebar-menu a:hover {
+  background-color: var(--gray-200);
+  color: #f6b26b;
+}
+
+.sidebar-menu a.active {
+  background-color: var(--primary-color);
+  color: #ffe600;
+  border-left: 5px solid #f1c40f;
+}
+
+.sidebar-menu a i {
+  width: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Main Content Area */
+.users-section {
+  flex: 1;
+  margin-left: 250px;
+  padding: 25px;
+  max-width: calc(100% - 250px);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.btn-add {
+  background-color: #231b47;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-add:hover {
+  background-color: #2980b9;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 10px;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+#search-users {
+  width: 250px;
+}
+
+/* Users Table */
+.users-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(100, 56, 102, 0.05);
+}
+
+.users-table thead th {
+  background-color: #f1c40f;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 14px;
+  border-bottom: 1px solid #c6c7ca;
+}
+
+.users-table tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #f1f1f1;
+  color: #5a6473;
+  font-size: 14px;
+}
+
+.users-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.checkbox-cell {
+  width: 40px;
+}
+
+.checkbox-cell input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  accent-color: #3498db;
+}
+
+/* Status Badges */
+.status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #e3f7ec;
+  color: #10b981;
+}
+
+.status-inactive {
+  background-color: #feeceb;
+  color: #ef4444;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  color: #3498db;
+}
+
+.delete-btn {
+  color: #ef4444;
+}
+
+.action-btn:hover {
+  background-color: #f1f5f9;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-item:hover {
+  background-color: #f1f5f9;
+}
+
+.page-item.active {
+  background-color: var(--primary-color);
+  color: rgb(255, 230, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-header h2 span,
+  .sidebar-menu a span {
+    display: none;
+  }
+
+  .sidebar-menu a {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .sidebar-menu a i {
+    margin-right: 0;
+    font-size: 18px;
+  }
+
+  .users-section {
+    margin-left: 70px;
+    max-width: calc(100% - 70px);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  #search-users {
+    width: 100%;
+  }
+
+  .users-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing User | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/user-billing.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+      </div>
+      <div class="user-profile">
+        <img
+          src="../asset/anggota/syukri.jpg"
+          alt="User Profile"
+          class="profile-picture"
+          id="sidebar-profile-img"
+        />
+        <div class="profile-info">
+          <h3 id="firsname-nav"></h3>
+          <p id="role-nav"></p>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='user-dashboard.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-server.html';"
+              ><i class="fas fa-server"></i> <span>Virtual Servers</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='user-billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-support.html';"
+              ><i class="fas fa-headset"></i> <span>Support</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-profile.html';"
+              ><i class="fas fa-user"></i> <span>Profile</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>Billing Dashboard</h1>
+      </div>
+      <div class="billing-card">
+        <div class="billing-info">
+          <div class="user-info">
+            <div>
+              <h2>Account Information</h2>
+              <p>
+                <strong>Username:</strong> <span id="username-billing"></span>
+              </p>
+              <p><strong>Account ID:</strong> <span id="id-billing"></span></p>
+              <p><strong>Email:</strong> <span id="email-billing"></span></p>
+            </div>
+            <div>
+              <h2>Billing Summary</h2>
+              <p><strong>Current Balance:</strong> $125.50</p>
+              <p><strong>Next Billing Date:</strong> Apr 23, 2025</p>
+              <p><strong>Payment Method:</strong> Visa ending in 4321</p>
+            </div>
+          </div>
+
+          <div class="server-details">
+            <h3>Your Servers</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Server ID</th>
+                  <th>Plan</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                  <th>Monthly Cost</th>
+                  <th>Next Billing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SRV-78901</td>
+                  <td>VPS Premium</td>
+                  <td>USA East</td>
+                  <td><span class="status status-active">Active</span></td>
+                  <td>$85.00</td>
+                  <td>Apr 23, 2025</td>
+                </tr>
+                <tr>
+                  <td>SRV-78902</td>
+                  <td>Dedicated Small</td>
+                  <td>Europe West</td>
+                  <td><span class="status status-active">Active</span></td>
+                  <td>$120.00</td>
+                  <td>Apr 15, 2025</td>
+                </tr>
+                <tr>
+                  <td>SRV-78903</td>
+                  <td>VPS Basic</td>
+                  <td>Asia Pacific</td>
+                  <td><span class="status status-pending">Pending</span></td>
+                  <td>$35.50</td>
+                  <td>Apr 23, 2025</td>
+                </tr>
+                <tr class="total-row">
+                  <td colspan="4">Total Monthly Cost</td>
+                  <td colspan="2">$240.50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="payment-section">
+            <h2>Payment Options</h2>
+            <p>Choose a payment method:</p>
+            <button class="btn">Credit Card</button>
+            <button class="btn">PayPal</button>
+            <button class="btn">Bank Transfer</button>
+            <button class="btn btn-success">Make Payment</button>
+          </div>
+
+          <div class="payment-history">
+            <h3>Payment History</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TRX-54321</td>
+                  <td>Mar 23, 2025</td>
+                  <td>Monthly Billing</td>
+                  <td>$240.50</td>
+                  <td><span class="status status-active">Paid</span></td>
+                </tr>
+                <tr>
+                  <td>TRX-54320</td>
+                  <td>Feb 23, 2025</td>
+                  <td>Monthly Billing</td>
+                  <td>$205.00</td>
+                  <td><span class="status status-active">Paid</span></td>
+                </tr>
+                <tr>
+                  <td>TRX-54319</td>
+                  <td>Jan 23, 2025</td>
+                  <td>Monthly Billing</td>
+                  <td>$205.00</td>
+                  <td><span class="status status-active">Paid</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="invoice-section">
+            <h3>Invoices</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Issued Date</th>
+                  <th>Due Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INV-98765</td>
+                  <td>Mar 23, 2025</td>
+                  <td>Apr 06, 2025</td>
+                  <td>$240.50</td>
+                  <td><span class="status status-pending">Pending</span></td>
+                  <td>
+                    <a href="#" class="btn">View</a>
+                    <a href="#" class="btn">Download</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>INV-98764</td>
+                  <td>Feb 23, 2025</td>
+                  <td>Mar 09, 2025</td>
+                  <td>$205.00</td>
+                  <td><span class="status status-active">Paid</span></td>
+                  <td>
+                    <a href="#" class="btn">View</a>
+                    <a href="#" class="btn">Download</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>INV-98763</td>
+                  <td>Jan 23, 2025</td>
+                  <td>Feb 06, 2025</td>
+                  <td>$205.00</td>
+                  <td><span class="status status-active">Paid</span></td>
+                  <td>
+                    <a href="#" class="btn">View</a>
+                    <a href="#" class="btn">Download</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="billing-card">
+        <div class="header">
+          <h2>Billing Settings</h2>
+        </div>
+        <div class="billing-info">
+          <div class="payment-methods">
+            <h3>Saved Payment Methods</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Details</th>
+                  <th>Expiry</th>
+                  <th>Default</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Visa</td>
+                  <td>**** **** **** 4321</td>
+                  <td>09/26</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#" class="btn">Edit</a>
+                    <a href="#" class="btn">Remove</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>MasterCard</td>
+                  <td>**** **** **** 8765</td>
+                  <td>11/27</td>
+                  <td>No</td>
+                  <td>
+                    <a href="#" class="btn">Edit</a>
+                    <a href="#" class="btn">Remove</a>
+                    <a href="#" class="btn">Set Default</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn">Add Payment Method</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/helper/getProfileNavbar.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedAvatar = localStorage.getItem("profileAvatar");
+        if (savedAvatar) {
+          const sidebarProfileImg = document.getElementById(
+            "sidebar-profile-img"
+          );
+          if (sidebarProfileImg) {
+            sidebarProfileImg.src = savedAvatar;
+          }
+
+          const profileImgPreview = document.getElementById(
+            "profile-img-preview"
+          );
+          if (profileImgPreview) {
+            profileImgPreview.src = savedAvatar;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

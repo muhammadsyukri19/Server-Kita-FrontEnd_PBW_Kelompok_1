@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support User | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/user-support.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+      </div>
+      <div class="user-profile">
+        <img
+          src="../asset/anggota/syukri.jpg"
+          alt="User Profile"
+          class="profile-picture"
+          id="sidebar-profile-img"
+        />
+        <div class="profile-info">
+          <h3 id="firsname-nav"></h3>
+          <p id="role-nav"></p>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='user-dashboard.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-server.html';"
+              ><i class="fas fa-server"></i> <span>Virtual Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='user-support.html';"
+              ><i class="fas fa-headset"></i> <span>Support</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-profile.html';"
+              ><i class="fas fa-user"></i> <span>Profile</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>Customer Support</h1>
+      </div>
+      <div class="support-card">
+        <div class="support-content">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search for help articles, FAQs, or ticket topics..."
+          />
+
+          <div class="support-options">
+            <div class="support-option">
+              <div class="icon">
+                <img src="../asset/icon/ticket.png" />
+              </div>
+              <h3>Submit a Ticket</h3>
+              <p>
+                Create a new support request for technical issues or billing
+                questions.
+              </p>
+            </div>
+            <div class="support-option">
+              <div class="icon">
+                <img src="../asset/icon/thought.png" />
+              </div>
+              <h3>Knowledge Base</h3>
+              <p>
+                Browse our documentation, tutorials, and guides to solve common
+                issues.
+              </p>
+            </div>
+            <div class="support-option">
+              <div class="icon">
+                <img src="../asset/icon/server.png" />
+              </div>
+              <h3>Server Status</h3>
+              <p>
+                Check the current status of our servers and any ongoing
+                incidents.
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <div class="tab active" data-tab="tickets">My Tickets</div>
+            <div class="tab" data-tab="knowledge">Knowledge Base</div>
+            <div class="tab" data-tab="contact">Contact Us</div>
+          </div>
+
+          <div class="tab-content active" id="tickets">
+            <div class="ticket-form">
+              <h3>Submit a New Support Ticket</h3>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  class="form-control"
+                  placeholder="Brief description of your issue"
+                />
+              </div>
+              <div class="form-group">
+                <label for="server">Related Server</label>
+                <select id="server" class="form-control">
+                  <option value="">-- Select Server --</option>
+                  <option value="SRV-INA01">
+                    SRV-INA01 (VPS Premium - Jakarta)
+                  </option>
+                  <option value="SRV-INA02">
+                    SRV-INA02 (Dedicated Server - Jawa Timur-Surabaya)
+                  </option>
+                  <option value="SRV-INA03">
+                    SRV-INA03 (Cloud Hosting - Aceh-Banda Aceh)
+                  </option>
+                  <option value="SRV-INA04">
+                    SRV-INA04 (Colocation - Sumatera Utara-Medan)
+                  </option>
+                  <option value="SRV-INA05">
+                    SRV-INA05 (Shared Hosting - Aceh-Langsa)
+                  </option>
+                  <option value="other">
+                    Other/Not Related to a Specific Server
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" class="form-control">
+                  <option value="">-- Select Category --</option>
+                  <option value="technical">Technical Issue</option>
+                  <option value="billing">Billing Question</option>
+                  <option value="account">Account Management</option>
+                  <option value="performance">Performance Problem</option>
+                  <option value="upgrade">Upgrade Request</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority" class="form-control">
+                  <option value="low">Low - General question</option>
+                  <option value="medium">Medium - Issue affecting usage</option>
+                  <option value="high">
+                    High - Critical service disruption
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  class="form-control"
+                  placeholder="Please provide detailed information about your issue, including any error messages, steps to reproduce, and what you've already tried."
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="attachment">Attachments</label>
+                <input type="file" id="attachment" class="form-control" />
+                <small>Upload screenshots or log files (Max size: 10MB)</small>
+              </div>
+              <button class="btn">Submit Ticket</button>
+            </div>
+
+            <div class="ticket-history">
+              <h3>Your Recent Tickets</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Subject</th>
+                    <th>Server</th>
+                    <th>Created</th>
+                    <th>Last Update</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TKT-45678</td>
+                    <td>Unable to access server after reboot</td>
+                    <td>SRV-78901</td>
+                    <td>Mar 20, 2025</td>
+                    <td>Mar 21, 2025</td>
+                    <td><span class="status status-open">Open</span></td>
+                    <td><a href="#" class="btn">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>TKT-45670</td>
+                    <td>Request for additional RAM allocation</td>
+                    <td>SRV-78902</td>
+                    <td>Mar 15, 2025</td>
+                    <td>Mar 17, 2025</td>
+                    <td><span class="status status-pending">Pending</span></td>
+                    <td><a href="#" class="btn">View</a></td>
+                  </tr>
+                  <tr>
+                    <td>TKT-45665</td>
+                    <td>Billing discrepancy on March invoice</td>
+                    <td>N/A</td>
+                    <td>Mar 10, 2025</td>
+                    <td>Mar 12, 2025</td>
+                    <td><span class="status status-closed">Closed</span></td>
+                    <td><a href="#" class="btn">View</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-content" id="knowledge">
+            <h3>Knowledge Base</h3>
+            <p>
+              Find answers to common questions and learn how to get the most out
+              of your servers.
+            </p>
+
+            <div class="kb-categories">
+              <div class="kb-category">
+                <h4>Getting Started</h4>
+                <ul>
+                  <li>
+                    <a href="#">Setting up your server for the first time</a>
+                  </li>
+                  <li><a href="#">Basic security configurations</a></li>
+                  <li><a href="#">Connecting via SSH</a></li>
+                  <li><a href="#">Transferring files to your server</a></li>
+                  <li><a href="#">Understanding your server dashboard</a></li>
+                </ul>
+              </div>
+              <div class="kb-category">
+                <h4>Server Management</h4>
+                <ul>
+                  <li><a href="#">Restarting your server</a></li>
+                  <li><a href="#">Monitoring server health</a></li>
+                  <li><a href="#">Setting up automatic backups</a></li>
+                  <li><a href="#">Managing snapshots</a></li>
+                  <li><a href="#">Upgrading server resources</a></li>
+                </ul>
+              </div>
+              <div class="kb-category">
+                <h4>Network & Security</h4>
+                <ul>
+                  <li><a href="#">Configuring a firewall</a></li>
+                  <li><a href="#">Setting up a VPN on your server</a></li>
+                  <li><a href="#">Managing SSL certificates</a></li>
+                  <li><a href="#">DDoS protection options</a></li>
+                  <li><a href="#">Network troubleshooting</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="kb-categories">
+              <div class="kb-category">
+                <h4>Billing & Account</h4>
+                <ul>
+                  <li><a href="#">Understanding your invoice</a></li>
+                  <li><a href="#">Payment methods accepted</a></li>
+                  <li><a href="#">Updating billing information</a></li>
+                  <li><a href="#">Subscription management</a></li>
+                  <li><a href="#">Tax documents and receipts</a></li>
+                </ul>
+              </div>
+              <div class="kb-category">
+                <h4>Troubleshooting</h4>
+                <ul>
+                  <li><a href="#">Common connectivity issues</a></li>
+                  <li><a href="#">Resolving performance problems</a></li>
+                  <li><a href="#">Diagnosing disk space issues</a></li>
+                  <li><a href="#">Recovery from system failures</a></li>
+                  <li><a href="#">Troubleshooting resource usage</a></li>
+                </ul>
+              </div>
+              <div class="kb-category">
+                <h4>Advanced Topics</h4>
+                <ul>
+                  <li><a href="#">Load balancing configuration</a></li>
+                  <li><a href="#">Database optimization</a></li>
+                  <li><a href="#">Docker and container management</a></li>
+                  <li><a href="#">Setting up auto-scaling</a></li>
+                  <li><a href="#">Advanced monitoring solutions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="contact">
+            <h3>Contact Our Support Team</h3>
+            <p>
+              Our support team is available 24/7 to assist you with any issues
+              or questions.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="icon"></div>
+                <h3>Live Chat</h3>
+                <p>
+                  Chat with our support agents in real-time for immediate
+                  assistance.
+                </p>
+                <button class="btn">Start Chat</button>
+              </div>
+              <div class="contact-method">
+                <div class="icon"></div>
+                <h3>Email Support</h3>
+                <p>Send us an email and we'll respond within 24 hours.</p>
+                <p><strong>support@serverrent.com</strong></p>
+              </div>
+              <div class="contact-method">
+                <div class="icon"></div>
+                <h3>Phone Support</h3>
+                <p>Call us directly for urgent matters.</p>
+                <p><strong>+1 (800) 123-4567</strong></p>
+                <small>Available 24/7 for Premium Customers</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How do I reset my server password?
+                <span>+</span>
+              </div>
+              <div class="faq-answer">
+                <p>To reset your server password:</p>
+                <ol>
+                  <li>Log in to your ServerRent dashboard</li>
+                  <li>Navigate to the Servers section</li>
+                  <li>Select the server you need to reset the password for</li>
+                  <li>Click on "Settings" then "Reset Password"</li>
+                  <li>
+                    Follow the on-screen instructions to set a new password
+                  </li>
+                </ol>
+                <p>
+                  Note: Your server will need to be rebooted for the password
+                  change to take effect.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What payment methods do you accept?
+                <span>+</span>
+              </div>
+              <div class="faq-answer">
+                <p>We accept the following payment methods:</p>
+                <ul>
+                  <li>
+                    Credit/Debit Cards (Visa, MasterCard, American Express,
+                    Discover)
+                  </li>
+                  <li>PayPal</li>
+                  <li>Bank Transfers</li>
+                  <li>Cryptocurrency (Bitcoin, Ethereum)</li>
+                </ul>
+                <p>
+                  For enterprise customers, we also offer invoicing with net-30
+                  payment terms after credit approval.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How long does it take to provision a new server?
+                <span>+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Most virtual servers (VPS) are provisioned within 5-10 minutes
+                  after payment confirmation. Dedicated servers typically take
+                  24-48 hours to set up and configure.
+                </p>
+                <p>
+                  You'll receive an email notification with access details as
+                  soon as your server is ready. You can also check the status of
+                  your server provisioning in the dashboard under "Pending
+                  Orders."
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Can I upgrade my server later?
+                <span>+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, you can upgrade your server resources at any time. We
+                  offer flexible scaling options:
+                </p>
+                <ul>
+                  <li>
+                    For VPS plans: You can upgrade CPU, RAM, and storage with
+                    just a few clicks. Most upgrades happen instantly with a
+                    quick reboot.
+                  </li>
+                  <li>
+                    For Dedicated servers: Hardware upgrades are available but
+                    may require scheduling maintenance windows.
+                  </li>
+                </ul>
+                <p>
+                  To upgrade, go to your server details page and click on the
+                  "Upgrade" button. You'll only be charged the pro-rated
+                  difference for the remainder of your billing cycle.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What's your uptime guarantee?
+                <span>+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We guarantee 99.9% uptime for all our hosting services. This
+                  is backed by our Service Level Agreement (SLA).
+                </p>
+                <p>
+                  If we fail to meet this uptime guarantee, you may be eligible
+                  for service credits. The credit amount depends on the duration
+                  of the downtime and is applied automatically to your next
+                  billing cycle.
+                </p>
+                <p>
+                  For detailed information about our uptime calculations and
+                  credit policy, please refer to our
+                  <a href="#">SLA documentation</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/helper/getProfileNavbar.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedAvatar = localStorage.getItem("profileAvatar");
+        if (savedAvatar) {
+          const sidebarProfileImg = document.getElementById(
+            "sidebar-profile-img"
+          );
+          if (sidebarProfileImg) {
+            sidebarProfileImg.src = savedAvatar;
+          }
+
+          const profileImgPreview = document.getElementById(
+            "profile-img-preview"
+          );
+          if (profileImgPreview) {
+            profileImgPreview.src = savedAvatar;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboardAdmin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+          <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+        </div>
+        <div class="sidebar-menu">
+          <ul>
+            <li>
+              <a href="#" class="active" onclick="window.location.href='dashboardAdmin.html';"
+                ><i class="fas fa-home"></i> <span>Overview</span></a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="window.location.href='user.html';"
+                ><i class="fas fa-user"></i> <span>User</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="window.location.href='server.html';"
+                ><i class="fas fa-server"></i> <span>Servers</span></a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="window.location.href='billing.html';"
+                ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="window.location.href='settings.html';"
+                ><i class="fas fa-cog"></i> <span>Settings</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <div class="page-title">
+                <h1>Dashboard Admin</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-cards">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <div class="number">1,248</div>
+                <div class="change positive">
+                    <i class="fas fa-arrow-up"></i> +12% from last month
+                </div>
+            </div>
+            <div class="stat-card">
+                <h3>Active Servers</h3>
+                <div class="number">856</div>
+                <div class="change positive">
+                    <i class="fas fa-arrow-up"></i> +9% from last month
+                </div>
+            </div>
+            <div class="stat-card">
+                <h3>Monthly Revenue</h3>
+                <div class="number">Rp 85.6 Juta</div>
+                <div class="change positive">
+                    <i class="fas fa-arrow-up"></i> +15% from last month
+                </div>
+            </div>
+            <div class="stat-card">
+                <h3>Ticket Support</h3>
+                <div class="number">24</div>
+                <div class="change negative">
+                    <i class="fas fa-arrow-down"></i> -5% from last month
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphs -->
+        <div class="graphs-container">
+            <div class="graph-card">
+                <div class="graph-header">
+                    <h3>User Growth</h3>
+                    <select>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 3 Months</option>
+                    </select>
+                </div>
+                <div class="graph-content" id="userGrowthChart">
+                    User growth chart will be rendered here
+                </div>
+            </div>
+            <div class="graph-card-1">
+                <div class="graph-header-1">
+                    <h3>Revenue</h3>
+                    <select>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 3 Months</option>
+                    </select>
+                </div>
+                <div class="graph-content" id="revenueChart">
+                    Revenue chart will be rendered here
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activities -->
+        <div class="activities-section">
+            <div class="section-header">
+                <h3>Recent Activities</h3>
+                <a href="#">View All</a>
+            </div>
+            <ul class="activity-list">
+                <li class="activity-item">
+                    <div class="activity-icon user-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p>New user Ahmad Rizki registered</p>
+                        <div class="activity-time">2 hours ago</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon purchase-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p>PT. Maju Bersama purchased Enterprise plan</p>
+                        <div class="activity-time">5 hours ago</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon alert-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p>Server alert: SRV-042 high CPU usage</p>
+                        <div class="activity-time">Yesterday</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon update-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <div class="activity-content">
+                        <p>Budi Santoso updated billing information</p>
+                        <div class="activity-time">Yesterday</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="js/dashboardAdmin.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+/* Login Page Styles */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi Glow saat focus */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+  }
+}
+
+/* Animasi Hover pada tombol */
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Container Login */
+.auth-container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #3b355a;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.auth-form-container {
+  flex: 1;
+  max-width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-image {
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-form-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f1c40f;
+}
+
+/* Styling Input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #f1c40f;
+}
+
+/* Input Text */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #f1c40f;
+  animation: glow 0.6s ease-in-out;
+}
+
+/* Dropdown Select */
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.input-container i {
+  margin-right: 8px;
+  color: #888888;
+}
+
+.input-container select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.input-container select:focus {
+  border-color: #f1c40f;
+  animation: glow 0.6s ease-in-out;
+}
+
+/* Password Input */
+.password-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.password-input input {
+  flex: 1;
+  width: 100%;
+  padding-right: 35px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.password-toggle:hover {
+  color: #007bff;
+}
+
+/* Pesan error */
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Checkbox */
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group.checkbox input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-group.checkbox label {
+  margin: 0;
+}
+
+/* Tombol Login */
+.btn-block {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1c40f;
+  color: #3b355a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-block:hover {
+  animation: buttonHover 0.3s ease-in-out;
+  background-color: #7260cc;
+  color: #f1c40f;
+}
+
+/* Link tambahan */
+.auth-links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.auth-links a {
+  color: #f1c40f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #ffffff;
+}
+
+.auth-links span {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (Lebar Maksimal: 768px) */
+@media screen and (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .auth-form-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .auth-image {
+    display: none; /* Sembunyikan gambar di tablet */
+  }
+}
+
+/* Mobile (Lebar Maksimal: 480px) */
+@media screen and (max-width: 480px) {
+  .auth-container {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .auth-form-container {
+    padding: 15px;
+  }
+
+  .auth-form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-block {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .auth-links {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Admin | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link rel="stylesheet" href="../css/addUser.css">
+  </head>
+  <body>
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="sidebar-header">
+      <h2><i class="fas fa-tachometer-alt"></i><span>ServerKita.</span></h2>
+    </div>
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a href="#" onclick="window.location.href='dashboardAdmin.html';"
+            ><i class="fas fa-home"></i> <span>Overview</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="active" onclick="window.location.href='user.html';"
+            ><i class="fas fa-user"></i> <span>User</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="window.location.href='server.html';"
+            ><i class="fas fa-server"></i> <span>Servers</span></a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="window.location.href='billing.html';"
+            ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="window.location.href='settings.html';"
+            ><i class="fas fa-cog"></i> <span>Settings</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div> 
+
+    <!-- Add User Modal -->
+    <section id="add-user-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Edit User</h3>
+            <button class="close-modal" onclick="window.location.href='user.html';">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="edit-user-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-user-name">Full Name</label>
+                  <input type="text" id="edit-user-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="edit-user-email">Email</label>
+                  <input type="email" id="edit-user-email" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-user-role">Role</label>
+                  <select id="edit-user-role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-user-status">Status</label>
+                  <select id="edit-user-status">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary close-modal" onclick="window.location.href = '/pages/user.html'">Cancel</button>
+            <button class="btn btn-primary" id="save-admin-edit-user">
+              Save User
+            </button>
+          </div>
+        </div>
+      </div>
+      </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/addUser.js"></script>
+    <script src="../js/services/users/editUser.js"></script>
+  </body>
+</html>

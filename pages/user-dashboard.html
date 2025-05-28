@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard User | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/user-dashboard.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+      </div>
+      <div class="user-profile">
+        <img
+          src="../asset/anggota/syukri.jpg"
+          alt="User Profile"
+          class="profile-picture"
+          id="sidebar-profile-img"
+        />
+        <div class="profile-info">
+          <h3 id="firsname-nav"></h3>
+          <p id="role-nav"></p>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='user-dashboard.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-server.html';"
+              ><i class="fas fa-server"></i> <span>Virtual Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-support.html';"
+              ><i class="fas fa-headset"></i> <span>Support</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-profile.html';"
+              ><i class="fas fa-user"></i> <span>Profile</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main content -->
+    <div class="main-content">
+      <!-- <div class="dashboard-content"> -->
+      <div class="top-nav">
+        <div class="page-title">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="dashboard-actions">
+          <div class="notification-bell">
+            <i class="fas fa-bell"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Overview Tab -->
+      <div id="user-overview" class="dashboard-tab active">
+        <div class="dashboard-welcome">
+          <h3>Selamat Datang, <span id="user-name"></span>!</h3>
+          <p>Berikut adalah ringkasan layanan server Anda.</p>
+        </div>
+        <div class="dashboard-cards">
+          <div class="dashboard-card">
+            <div class="dashboard-card-content">
+              <h3>Active Servers</h3>
+              <p class="dashboard-card-value">3</p>
+            </div>
+            <div class="dashboard-card-icon">
+              <i class="fas fa-server"></i>
+            </div>
+          </div>
+          <div class="dashboard-card-1">
+            <div class="dashboard-card-content-1">
+              <h3>Bandwidth Usage</h3>
+              <p class="dashboard-card-value-1">458 GB</p>
+              <p class="dashboard-card-info-1">of 1 TB (45.8%)</p>
+            </div>
+            <div class="dashboard-card-icon-1">
+              <i class="fas fa-network-wired-1"></i>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-content">
+              <h3>Active Tickets</h3>
+              <p class="dashboard-card-value">1</p>
+            </div>
+            <div class="dashboard-card-icon">
+              <i class="fas fa-ticket-alt"></i>
+            </div>
+          </div>
+          <div class="dashboard-card-1">
+            <div class="dashboard-card-content-1">
+              <h3>Billing Status</h3>
+              <p class="dashboard-card-value-1">Current</p>
+              <p class="dashboard-card-info-1">Next: 15 Apr 2025</p>
+            </div>
+            <div class="dashboard-card-icon-1">
+              <i class="fas fa-money-bill-wave-1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Server Status Section -->
+    <div class="server-status-section">
+      <div class="section-header">
+        <h2>Server Status</h2>
+        <button class="refresh-button">
+          <i class="fas fa-sync-alt"></i> Refresh
+        </button>
+      </div>
+      <div class="server-status-cards">
+        <div class="server-card">
+          <div class="server-card-header">
+            <h3>Web Server</h3>
+            <span class="status-badge online">Online</span>
+          </div>
+          <div class="server-card-body">
+            <div class="server-info-row">
+              <span class="server-info-label">IP Address:</span>
+              <span class="server-info-value">192.168.1.100</span>
+            </div>
+            <div class="server-info-row">
+              <span class="server-info-label">Uptime:</span>
+              <span class="server-info-value">15 days, 7 hours</span>
+            </div>
+            <div class="server-metrics">
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="65">
+                  <div class="metric-number">65%</div>
+                </div>
+                <div class="metric-label">CPU</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="42">
+                  <div class="metric-number">42%</div>
+                </div>
+                <div class="metric-label">RAM</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="78">
+                  <div class="metric-number">78%</div>
+                </div>
+                <div class="metric-label">Disk</div>
+              </div>
+            </div>
+            <button class="server-action-btn">
+              <i class="fas fa-cog"></i> Manage
+            </button>
+          </div>
+        </div>
+
+        <div class="server-card">
+          <div class="server-card-header">
+            <h3>Database Server</h3>
+            <span class="status-badge online">Online</span>
+          </div>
+          <div class="server-card-body">
+            <div class="server-info-row">
+              <span class="server-info-label">IP Address:</span>
+              <span class="server-info-value">192.168.1.101</span>
+            </div>
+            <div class="server-info-row">
+              <span class="server-info-label">Uptime:</span>
+              <span class="server-info-value">12 days, 3 hours</span>
+            </div>
+            <div class="server-metrics">
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="32">
+                  <div class="metric-number">32%</div>
+                </div>
+                <div class="metric-label">CPU</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="51">
+                  <div class="metric-number">51%</div>
+                </div>
+                <div class="metric-label">RAM</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="45">
+                  <div class="metric-number">45%</div>
+                </div>
+                <div class="metric-label">Disk</div>
+              </div>
+            </div>
+            <button class="server-action-btn">
+              <i class="fas fa-cog"></i> Manage
+            </button>
+          </div>
+        </div>
+
+        <div class="server-card">
+          <div class="server-card-header">
+            <h3>Backup Server</h3>
+            <span class="status-badge online">Online</span>
+          </div>
+          <div class="server-card-body">
+            <div class="server-info-row">
+              <span class="server-info-label">IP Address:</span>
+              <span class="server-info-value">192.168.1.102</span>
+            </div>
+            <div class="server-info-row">
+              <span class="server-info-label">Uptime:</span>
+              <span class="server-info-value">20 days, 11 hours</span>
+            </div>
+            <div class="server-metrics">
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="12">
+                  <div class="metric-number">12%</div>
+                </div>
+                <div class="metric-label">CPU</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="25">
+                  <div class="metric-number">25%</div>
+                </div>
+                <div class="metric-label">RAM</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-circle" data-percentage="82">
+                  <div class="metric-number">82%</div>
+                </div>
+                <div class="metric-label">Disk</div>
+              </div>
+            </div>
+            <button class="server-action-btn">
+              <i class="fas fa-cog"></i> Manage
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity Section -->
+    <div class="recent-activity-section">
+      <div class="section-header">
+        <h2>Recent Activity</h2>
+        <a href="#" class="view-all-link"
+          >View All <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+      <div class="activity-timeline">
+        <div class="activity-item">
+          <div class="activity-icon warning">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-time">Today, 09:41 AM</div>
+            <div class="activity-title">High CPU Usage Detected</div>
+            <div class="activity-description">
+              Web Server reached 92% CPU utilization for 15 minutes
+            </div>
+          </div>
+          <div class="activity-action">
+            <button class="action-btn"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon success">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-time">Yesterday, 14:22 PM</div>
+            <div class="activity-title">Backup Completed</div>
+            <div class="activity-description">
+              Weekly backup completed successfully (2.3 GB)
+            </div>
+          </div>
+          <div class="activity-action">
+            <button class="action-btn"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon info">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-time">Mar 21, 2025, 10:15 AM</div>
+            <div class="activity-title">System Update</div>
+            <div class="activity-description">
+              Security patches have been applied to all servers
+            </div>
+          </div>
+          <div class="activity-action">
+            <button class="action-btn"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon danger">
+            <i class="fas fa-times-circle"></i>
+          </div>
+          <div class="activity-content">
+            <div class="activity-time">Mar 20, 2025, 02:30 PM</div>
+            <div class="activity-title">Connection Failure</div>
+            <div class="activity-description">
+              Database server was unreachable for 5 minutes
+            </div>
+          </div>
+          <div class="activity-action">
+            <button class="action-btn"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats and Resources Section (2-column layout) -->
+    <div class="dashboard-grid">
+      <!-- Left Column - Quick Stats -->
+      <div class="dashboard-column">
+        <div class="stats-card">
+          <div class="section-header">
+            <h2>Resource Usage</h2>
+            <div class="time-selector">
+              <button class="time-btn active">Day</button>
+              <button class="time-btn">Week</button>
+              <button class="time-btn">Month</button>
+            </div>
+          </div>
+          <div class="usage-chart">
+            <div class="chart-placeholder">
+              <!-- Placeholder for actual chart -->
+              <div class="chart-bars">
+                <div
+                  class="chart-bar"
+                  style="height: 60%"
+                  data-label="00:00"
+                ></div>
+                <div
+                  class="chart-bar"
+                  style="height: 35%"
+                  data-label="04:00"
+                ></div>
+                <div
+                  class="chart-bar"
+                  style="height: 45%"
+                  data-label="08:00"
+                ></div>
+                <div
+                  class="chart-bar"
+                  style="height: 80%"
+                  data-label="12:00"
+                ></div>
+                <div
+                  class="chart-bar"
+                  style="height: 65%"
+                  data-label="16:00"
+                ></div>
+                <div
+                  class="chart-bar active"
+                  style="height: 55%"
+                  data-label="20:00"
+                ></div>
+                <div
+                  class="chart-bar"
+                  style="height: 40%"
+                  data-label="Now"
+                ></div>
+              </div>
+              <div class="chart-legend">
+                <span class="legend-label">CPU Usage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/helper/getProfileNavbar.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedAvatar = localStorage.getItem("profileAvatar");
+        if (savedAvatar) {
+          const sidebarProfileImg = document.getElementById(
+            "sidebar-profile-img"
+          );
+          if (sidebarProfileImg) {
+            sidebarProfileImg.src = savedAvatar;
+          }
+
+          const profileImgPreview = document.getElementById(
+            "profile-img-preview"
+          );
+          if (profileImgPreview) {
+            profileImgPreview.src = savedAvatar;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

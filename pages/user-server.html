@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Server | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/user-server.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+      </div>
+      <div class="user-profile">
+        <img
+          src="../asset/anggota/syukri.jpg"
+          alt="User Profile"
+          class="profile-picture"
+          id="sidebar-profile-img"
+        />
+        <div class="profile-info">
+          <h3 id="firsname-nav"></h3>
+          <p id="role-nav"></p>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='user-dashboard.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='user-server.html';"
+              ><i class="fas fa-server"></i> <span>Virtual Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-support.html';"
+              ><i class="fas fa-headset"></i> <span>Support</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-profile.html';"
+              ><i class="fas fa-user"></i> <span>Profile</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <!-- <div class="dashboard-content"> -->
+      <div class="top-nav">
+        <div class="page-title">
+          <h1>Virtual Server</h1>
+        </div>
+      </div>
+
+      <!-- Server List -->
+      <div class="virtual-server-list">
+        <div class="server-filters">
+          <input type="text" placeholder="Service Name" />
+          <input type="text" placeholder="Server IP" />
+          <select>
+            <option>Active</option>
+            <option>Inactive</option>
+            <option>Suspended</option>
+          </select>
+          <button class="search-btn"><i class="fas fa-search"></i> Cari</button>
+        </div>
+
+        <div class="server-info">
+          <div class="server-image">
+            <img src="../asset/elemen.png" alt="Gambar Server" />
+          </div>
+          <div class="server-description">
+            <strong>Server Virtual (VPS):</strong> Server virtual pribadi dengan sumber daya CPU, RAM, dan Disk yang didedikasikan.
+            <ul>
+              <li>
+                Hemat Biaya: Mudah digunakan. Cocok untuk individu dan bisnis kecil.
+              </li>
+              <li>
+                Lengkap: Termasuk pengaturan sistem, pemeliharaan, dan dukungan 24/7.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      <!-- virtual server -->
+      <div class="server-quick-view">
+        <div class="server-cards">
+          <div class="server-card-1">
+            <div class="server-card-header">
+              <h4>Jakarta-VPS-01</h4>
+              <span class="badge online">Online</span>
+            </div>
+            <div class="server-card-details">
+              <div class="detail-item">
+                <span class="detail-label">IP Address:</span>
+                <span class="detail-value">192.168.1.101</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">CPU:</span>
+                <span class="detail-value">4 Cores</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">RAM:</span>
+                <span class="detail-value">8 GB</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Storage:</span>
+                <span class="detail-value">160 GB SSD</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Uptime:</span>
+                <span class="detail-value">30 days</span>
+              </div>
+            </div>
+            <div class="server-card-footer">
+              <button class="btn btn-sm btn-outline">Manage</button>
+              <button class="btn btn-sm btn-outline">Reboot</button>
+            </div>
+          </div>
+          <div class="server-card">
+            <div class="server-card-header-1">
+              <h4>Jakarta-VPS-02</h4>
+              <span class="badge online">Online</span>
+            </div>
+            <div class="server-card-details">
+              <div class="detail-item-1">
+                <span class="detail-label">IP Address:</span>
+                <span class="detail-value">192.168.1.102</span>
+              </div>
+              <div class="detail-item-1">
+                <span class="detail-label">CPU:</span>
+                <span class="detail-value">2 Cores</span>
+              </div>
+              <div class="detail-item-1">
+                <span class="detail-label">RAM:</span>
+                <span class="detail-value">4 GB</span>
+              </div>
+              <div class="detail-item-1">
+                <span class="detail-label">Storage:</span>
+                <span class="detail-value">80 GB SSD</span>
+              </div>
+              <div class="detail-item-1">
+                <span class="detail-label">Uptime:</span>
+                <span class="detail-value">15 days</span>
+              </div>
+            </div>
+            <div class="server-card-footer">
+              <button class="btn btn-sm btn-outline-1">Manage</button>
+              <button class="btn btn-sm btn-outline-1">Reboot</button>
+            </div>
+          </div>
+          <div class="server-card-1">
+            <div class="server-card-header">
+              <h4>Bandung-CLD-01</h4>
+              <span class="badge online">Online</span>
+            </div>
+            <div class="server-card-details">
+              <div class="detail-item">
+                <span class="detail-label">IP Address:</span>
+                <span class="detail-value">192.168.1.103</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">CPU:</span>
+                <span class="detail-value">8 Cores</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">RAM:</span>
+                <span class="detail-value">16 GB</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Storage:</span>
+                <span class="detail-value">320 GB SSD</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Uptime:</span>
+                <span class="detail-value">7 days</span>
+              </div>
+            </div>
+            <div class="server-card-footer">
+              <button class="btn btn-sm btn-outline">Manage</button>
+              <button class="btn btn-sm btn-outline">Reboot</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/helper/getProfileNavbar.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedAvatar = localStorage.getItem("profileAvatar");
+        if (savedAvatar) {
+          const sidebarProfileImg = document.getElementById("sidebar-profile-img");
+          if (sidebarProfileImg) {
+            sidebarProfileImg.src = savedAvatar;
+          }
+    
+          const profileImgPreview = document.getElementById("profile-img-preview");
+          if (profileImgPreview) {
+            profileImgPreview.src = savedAvatar;
+          }
+        }
+      });
+    </script>
+    
+  </body>
+</html>

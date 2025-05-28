@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | ServerKita.</title>
+    <link rel="icon" type="image/png" href="../asset/server.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/user-profile.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-tachometer-alt"></i> <span>ServerKita.</span></h2>
+      </div>
+      <div class="user-profile">
+        <img
+          src="../asset/anggota/syukri.jpg"
+          alt="User Profile"
+          class="profile-picture"
+          id="sidebar-profile-img"
+        />
+        <div class="profile-info">
+          <h3 id="firsname-nav"></h3>
+          <p id="role-nav"></p>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="#" onclick="window.location.href='user-dashboard.html';"
+              ><i class="fas fa-home"></i> <span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-server.html';"
+              ><i class="fas fa-server"></i> <span>Virtual Servers</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-billing.html';"
+              ><i class="fas fa-credit-card"></i> <span>Billing</span></a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="window.location.href='user-support.html';"
+              ><i class="fas fa-headset"></i> <span>Support</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="active"
+              onclick="window.location.href='user-profile.html';"
+              ><i class="fas fa-user"></i> <span>Profile</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User Profile Tab -->
+    <div id="user-profile" class="dashboard-tab">
+      <div class="profile-container">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <img
+              id="profile-img-preview"
+              src="../asset/login.jpg"
+              alt="User Profile"
+            />
+            <button
+              class="change-avatar-btn"
+              onclick="document.getElementById('avatar-input').click();"
+            >
+              <i class="fas fa-camera"></i>
+            </button>
+            <input
+              type="file"
+              id="avatar-input"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+
+          <div class="profile-info">
+            <h3 id="fullname-header"></h3>
+            <p id="email-header"></p>
+            <p id="createdAt-header"></p>
+          </div>
+
+          <div class="profile-logout">
+            <button class="logout-btn" id="logout-user">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+          </div>
+        </div>
+
+        <div class="profile-tabs">
+          <button class="profile-tab-btn active" data-target="personal-info">
+            Personal Info
+          </button>
+          <button class="profile-tab-btn" data-target="security">
+            Security
+          </button>
+          <button class="profile-tab-btn" data-target="notifications">
+            Notifications
+          </button>
+        </div>
+
+        <div class="profile-tab-content">
+          <div id="personal-info" class="profile-tab-pane active">
+            <div class="profile-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="profile-first-name">First Name</label>
+                  <input type="text" id="profile-first-name" />
+                </div>
+                <div class="form-group">
+                  <label for="profile-last-name">Last Name</label>
+                  <input type="text" id="profile-last-name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="profile-email">Email</label>
+                  <input type="email" id="profile-email" />
+                </div>
+                <div class="form-group">
+                  <label for="profile-phone">Phone</label>
+                  <input type="tel" id="profile-phone" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="profile-company">Company</label>
+                  <input type="text" id="profile-company" />
+                </div>
+                <div class="form-group">
+                  <label for="profile-job-title">Job Title</label>
+                  <input type="text" id="profile-job-title" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="profile-address">Address</label>
+                <textarea id="profile-address"></textarea>
+              </div>
+              <div class="form-actions">
+                <button id="edit-profil-user-btn" class="btn btn-primary">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="security" class="profile-tab-pane">
+            <div class="profile-form">
+              <div class="form-group">
+                <label for="current-password">Current Password</label>
+                <input type="password" id="current-password" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="new-password">New Password</label>
+                  <input type="password" id="new-password" />
+                </div>
+                <div class="form-group">
+                  <label for="confirm-password">Confirm New Password</label>
+                  <input type="password" id="confirm-password" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Two-Factor Authentication</label>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="tfa-toggle" />
+                  <label for="tfa-toggle"></label>
+                  <span class="toggle-label">Disabled</span>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button id="change-password-btn" class="btn btn-primary">
+                  Update Security
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="notifications" class="profile-tab-pane">
+            <form class="profile-form">
+              <div class="notification-preference">
+                <div class="preference-header">
+                  <h4>Email Notifications</h4>
+                </div>
+                <div class="preference-item">
+                  <div class="preference-text">
+                    <h5>Server Status Alerts</h5>
+                    <p>
+                      Receive notifications when your servers experience issues
+                    </p>
+                  </div>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="server-alerts" checked />
+                    <label for="server-alerts"></label>
+                  </div>
+                </div>
+                <div class="preference-item">
+                  <div class="preference-text">
+                    <h5>Billing Notifications</h5>
+                    <p>Receive notifications about invoices and payments</p>
+                  </div>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="billing-alerts" checked />
+                    <label for="billing-alerts"></label>
+                  </div>
+                </div>
+                <div class="preference-item">
+                  <div class="preference-text">
+                    <h5>Promotional Emails</h5>
+                    <p>Receive updates about new features and special offers</p>
+                  </div>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="promo-alerts" />
+                    <label for="promo-alerts"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="notification-preference">
+                <div class="preference-header">
+                  <h4>SMS Notifications</h4>
+                </div>
+                <div class="preference-item">
+                  <div class="preference-text">
+                    <h5>Critical Alerts</h5>
+                    <p>Receive SMS for critical server issues only</p>
+                  </div>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="sms-alerts" checked />
+                    <label for="sms-alerts"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  Save Preferences
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/user-profile.js"></script>
+    <script src="../js/services/auth/logout.js"></script>
+    <script src="../js/services/profile/index.js"></script>
+    <script src="../js/helper/getProfileNavbar.js"></script>
+    <script src="../js/services/profile/editProfile.js"></script>
+    <script src="../js/services/profile/changePassword.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedAvatar = localStorage.getItem("profileAvatar");
+        if (savedAvatar) {
+          const sidebarProfileImg = document.getElementById(
+            "sidebar-profile-img"
+          );
+          if (sidebarProfileImg) {
+            sidebarProfileImg.src = savedAvatar;
+          }
+
+          const profileImgPreview = document.getElementById(
+            "profile-img-preview"
+          );
+          if (profileImgPreview) {
+            profileImgPreview.src = savedAvatar;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
