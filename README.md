@@ -13,7 +13,7 @@ Antarmuka pengguna (UI) dirancang modern, responsif, dan mudah digunakan di berb
 
 ## 🚀 Fitur Utama (Front-End)
 ### 1. Landing Page
-Halaman awal dengan informasi layanan ServerKita, CTA (Call To Action), dan navigasi ke login/register.
+Halaman awal dengan informasi layanan ServerKita dan navigasi ke login/register.
 
 ### 2. Halaman Login dan Register
 Form login & registrasi user dan admin.
@@ -21,7 +21,6 @@ Validasi input serta integrasi dengan backend untuk autentikasi.
 
 ### 3. Dashboard Pengguna
 Menampilkan ringkasan server aktif, status akun, dan shortcut ke fitur penting.
-Komponen modular dibangun agar dinamis berdasarkan data yang diterima.
 
 ### 4. Manajemen Server (User)
 Menampilkan daftar server yang disewa oleh user.
@@ -29,18 +28,16 @@ Informasi server meliputi: spesifikasi, status aktif/tidak, dan tanggal jatuh te
 
 ### 5. Billing & Riwayat Pembayaran
 Menampilkan saldo akun, tagihan server, dan riwayat transaksi.
-Terintegrasi dengan backend untuk update real-time data keuangan user.
 
 ### 6. Halaman Bantuan / Tiket Support
 Form pengajuan bantuan teknis.
-Sistem pengiriman tiket terhubung dengan database melalui backend.
 
 ### 7. Profil Pengguna
 Mengedit profil seperti nama, email, password.
 Fitur ganti password & keamanan akun.
 
 ## 🛠️ Teknologi yang Digunakan
-- HTML5 + CSS3
+- HTML + CSS
 - JavaScript Modular
 - Responsif
 - Git & GitHub
